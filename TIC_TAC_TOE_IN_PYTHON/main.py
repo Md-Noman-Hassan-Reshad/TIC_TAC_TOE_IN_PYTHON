@@ -93,7 +93,9 @@ if __name__ == "__main__":
     main()
 
 
-# -----------------------------------
+
+# --------------------------------------------ooooooooooooooooooooooooooooooooo----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # This code is an implementation of a simple command-line Tic-Tac-Toe game in Python. Let's break down the code step by step:
 
 # 1. `clear_console()`: This function clears the console screen. It uses the `os.system` function to execute the appropriate console-clearing command based on the operating system (Windows or Unix-like systems).
