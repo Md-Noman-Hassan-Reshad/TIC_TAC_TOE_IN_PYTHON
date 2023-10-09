@@ -1,3 +1,5 @@
+# Read at lasts comments to understand the code well at all
+
 import os
 
 def clear_console():
