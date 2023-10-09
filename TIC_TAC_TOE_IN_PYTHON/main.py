@@ -84,10 +84,48 @@ def main():
 
             turn = 3 - turn
 
-        play_again = input("\nDo you want to play again? (yes/no)[y/n]: ")
-        if play_again.lower() != 'yes' or play_again.lower() != 'y':
+        play_again = input("\nDo you want to play again? [y/n]: ")
+        if play_again.lower() != 'y':
             print("\nThanks for Playing Tic-Tac-Toe")
             break
 
 if __name__ == "__main__":
     main()
+
+
+# -----------------------------------
+# This code is an implementation of a simple command-line Tic-Tac-Toe game in Python. Let's break down the code step by step:
+
+# 1. `clear_console()`: This function clears the console screen. It uses the `os.system` function to execute the appropriate console-clearing command based on the operating system (Windows or Unix-like systems).
+
+# 2. `print_board(x_state, o_state)`: This function takes two lists, `x_state` and `o_state`, representing the current state of the game for player X and player O, respectively. It prints the Tic-Tac-Toe board with the current positions of X and O.
+
+# 3. `checkwin(x_state, o_state)`: This function checks if either player X or player O has won the game. It does this by checking all possible winning combinations (horizontal, vertical, and diagonal) and returns 'X' if player X wins, 'O' if player O wins, or `None` if there is no winner yet.
+
+# 4. `is_board_full(x_state, o_state)`: This function checks if the Tic-Tac-Toe board is full, meaning all positions are occupied by X or O.
+
+# 5. `main()`: This is the main function of the game. It starts by getting the names of the two players and then enters an infinite loop to play the game repeatedly.
+
+#    Inside the game loop:
+#    - Two lists, `x_state` and `o_state`, are initialized to represent the current state of the board.
+#    - `turn` is used to keep track of which player's turn it is (1 for player X and 2 for player O).
+
+#    The game loop continues until there is a winner or the board is full:
+#    - The console is cleared, and the current state of the board is printed.
+#    - The current player's name and symbol (X or O) are displayed.
+#    - The player is prompted to enter a position (0-8) to place their symbol.
+#    - Input validation is performed to ensure the input is within the valid range and the chosen position is not already occupied.
+#    - The chosen position is updated with the player's symbol (X or O).
+#    - After each move, the code checks if there is a winner or if the board is full.
+#    - If there is a winner, the winner's name and symbol are displayed, and the game ends.
+#    - If the board is full, it's a draw, and the game ends.
+#    - The `turn` is switched to the other player for the next iteration.
+
+#    After the game ends, the player is asked if they want to play again. If they enter 'y', a new game starts. Otherwise, the program exits.
+
+# 6. `if __name__ == "__main__":`: This line ensures that the `main` function is only executed if the script is run directly, not when it's imported as a module.
+
+# However, there are a few issues in the code:
+# - The `print_board` function call in the game loop should pass `x_state` and `o_state` as separate arguments, not as a single tuple.
+
+# The code should function as a simple Tic-Tac-Toe game where two players can take turns playing the game on the command line.
